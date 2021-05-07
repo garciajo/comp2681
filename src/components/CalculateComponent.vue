@@ -8,6 +8,7 @@
               <option disabled value="">Vaccine type</option>
               <option value="Pfizer">Pfizer-BioNTech</option>
               <option value="Moderna">Moderna</option>
+              <option value="AstraZeneca">AstraZeneca</option>
             </select>
         </div>
        </fieldset>
@@ -19,21 +20,25 @@
                 <th>Date of Authorization in Canada</th>
                 <td v-if="selected == 'Pfizer'">December 9, 2020</td>
                 <td v-if="selected == 'Moderna'">December 23, 2020</td>
+                <td v-if="selected == 'AstraZeneca'">February 26, 2021</td>
               </tr>
               <tr>
                 <th>Authorized Ages of use</th>
                 <td v-if="selected == 'Pfizer'">16 years of age and older</td>
                 <td v-if="selected == 'Moderna'">18 years of age and older</td>
+                <td v-if="selected == 'AstraZeneca'">Health Canada has authorized this product for 18 years of age and older. The safety and efficacy in children under 18 years of age have not yet been established.</td>
               </tr>
               <tr>
                 <th>Dose</th>
                 <td v-if="selected == 'Pfizer'">0.3ml(30mcg)</td>
                 <td v-if="selected == 'Moderna'">0.5ml(100mcg)</td>
+                <td v-if="selected == 'AstraZeneca'">0.5 mL (5 x 1010 viral particles)</td>
               </tr>
               <tr>
                 <th>Schedule</th>
                 <td v-if="selected == 'Pfizer'">2 Doses, a minimum of 21 days apart</td>
                 <td v-if="selected == 'Moderna'">2 Doses, a minimum of 28 days apart</td>
+                <td v-if="selected == 'AstraZeneca'">2 Doses, a minimum of 28 days apart</td>
               </tr>
               <tr>
                 <th>Booster Doses</th>
@@ -47,6 +52,7 @@
                 <th>Effectiveness</th>
                 <td v-if="selected == 'Pfizer'">95% 7 Days after 2nd dose</td>
                 <td v-if="selected == 'Moderna'">94.1% 14 days after the 2nd dose</td>
+                <td v-if="selected == 'AstraZeneca'">82% 14 days after the 2nd dose</td>
               </tr>
             </table>
           </p>
@@ -54,7 +60,7 @@
        <fieldset v-if="selected">
         <legend>Supplied</legend>
           <ul v-if="selected == 'Pfizer'">
-            <li>After preparation, each vial of Pfizer-BioNTech COVID-19 Vaccine containes up to six doses of 0.3mL</li>
+            <li>After preparation, each vial of Pfizer-BioNTech COVID-19 Vaccine contains up to six doses of 0.3mL</li>
             <li>Each dose must contain 0.3mL of vaccine</li>
             <li>If the amount of vaccine remaining in the vial and any excess volume, do not pool excess vaccine from multiple vials</li>
           </ul>
@@ -62,6 +68,15 @@
             <li>After preparation, each vial of Moderna COVID-19 Vaccine containes up to ten doses of 0.5mL</li>
             <li>Each dose must contain 0.5mL of vaccine</li>
             <li>If the amount of vaccine remaining in the vial and any excess volume, do not pool excess vaccine from multiple vials</li>
+          </ul>
+          <ul v-if="selected == 'AstraZeneca'">
+            <li>AstraZeneca COVID-19 vaccine is packaged in (not all pack sizes may beavailable):</li>
+            <ul>
+              <li>5 mL of solution in a 10-dose vial (clear type I glass) with stopper (elastomeric with aluminium overseal)</li>
+              <li>4 mL of solution in an 8-dose vial (clear type I glass) with stopper (elastomeric with aluminium overseal).</li>
+            </ul>
+            <li>Vaccines should be mixed with a careful swirling motion until a uniform suspension is achieved prior to administration. Unless otherwise instructed by the manufacturer, the vaccine should not be shaken before use. </li>
+            <li>Each vaccine dose of 0.5 mL is withdrawn into a syringe for injection to be administered intramuscularly. Use a separate sterile needle and syringe for each individual.</li>
           </ul>
        </fieldset>
        <fieldset v-if="selected">
