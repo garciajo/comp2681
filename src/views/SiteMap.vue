@@ -14,7 +14,7 @@
   <div class="container">
    <div class="wrapper">
      <h2>Cross-reference Links</h2>
-      <ul v-for="link in routes.getRoutes()" :key="link.abbreviation" class="links">
+      <ul v-for="link in routes.getRoutes()" :key="link.abbreviation" class="links">  <!-- Loop through router to get the routes using the native method getRoutes() -->
         <li><a v-bind:href="link.path">{{ link.name }}</a></li>
       </ul>
   </div>

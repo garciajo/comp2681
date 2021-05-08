@@ -21,7 +21,7 @@
           </tr>
             <tr v-for="link in similarWebsites" :key="link.abbreviation" class="links">
               <td><a v-bind:href="link.location">{{ link.name }}</a></td>
-              <td>{{ link.description }}<blockquote>"{{ link.like }}"</blockquote></td>
+              <td>{{ link.description }}<blockquote>"{{ link.like }}"</blockquote></td> <!-- Loop through Links Data -->
             </tr>
       </table>
     <h2>Component Websites</h2>

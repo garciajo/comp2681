@@ -8,14 +8,14 @@
    *   2021 Jose Garcia. Ottawa, Ontario.
    *********************************************************-->
 <template>
-    <form class="contact-form" @submit.prevent="submitRequest">
+    <form class="contact-form" @submit.prevent="submitRequest"> <!-- Vue event handling. The submit event will no longer reload the page -->
       <fieldset>
         <legend>Vaccine Info</legend>
         <div class="form-group">
           <label for="vaccineType">Type</label>
             <select id="vaccineType" class="half_width" v-model="selected">
               <option disabled value="">Vaccine type</option>
-              <option value="Pfizer">Pfizer-BioNTech</option>
+              <option value="Pfizer">Pfizer-BioNTech</option> <!-- Value will later be used for selected conditions below -->
               <option value="Moderna">Moderna</option>
               <option value="AstraZeneca">AstraZeneca</option>
             </select>

@@ -9,7 +9,7 @@
    *********************************************************-->
 <template>
   <div class="main">
-    <h1>{{ msg }}</h1>
+    <h1>{{ msg }}</h1> <!-- msg variable from the component view -->
     <div class="main_content">
         <p><span class="dropCap">W</span>elcome to the Vaccine Recording System (VRS). The VRS aims to facilitate the administration and recording of vaccines given to residents. </p>
         <p>This system will be presented to the Ministry of Education and once integrated will ensure the distribution taskforce has the technology to efficiently track and administer the COVID-19 vaccines. </p>

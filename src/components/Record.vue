@@ -133,6 +133,7 @@ export default defineComponent({
     },
     submitRequest: function (e) {
       this.errors = []
+      /* If the required field is not filled out, push it to the errors array */
       if (!this.user.lname) {
         this.errors.push(['lname', 'Last Name required'])
       }
@@ -151,8 +152,8 @@ export default defineComponent({
       if (!this.user.phone) {
         this.errors.push(['phone', 'Home Phone required'])
       }
-      this.$nextTick(() => this.focusInput())
-      e.preventDefault()
+      this.$nextTick(() => this.focusInput()) /** nextTick executes the focusInput function on next DOM update cycle **/
+      e.preventDefault() /* Event modifier to prevent the event from submitting */
     }
   },
   data () {
