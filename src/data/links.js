@@ -1,3 +1,12 @@
+/*********************************************************
+*   Final Project: Vaccine Recording System
+*   Purpose: Contains the data to be used in the links section
+*   Author: Jose Garcia
+*   Date: May 2021
+*   Filename: links.js
+*   Email: <garciaalfonzoj18@mytru.ca>
+*   2021 Jose Garcia. Ottawa, Ontario.
+**********************************************************/
 export const similarWebsites = [
   {
     name: 'COVID-19 Vaccination Tracker',

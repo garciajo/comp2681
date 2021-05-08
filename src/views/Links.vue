@@ -1,3 +1,12 @@
+<!--*********************************************************
+  *   Final Project: Vaccine Recording System
+  *   Purpose: View for the Links portion of the application
+  *   Author: Jose Garcia
+  *   Date: May 2021
+  *   Filename: Links.vue
+  *   Email: <garciaalfonzoj18@mytru.ca>
+  *   2021 Jose Garcia. Ottawa, Ontario.
+  *********************************************************-->
 <template>
   <div class="about">
     <h1>Useful Links</h1>

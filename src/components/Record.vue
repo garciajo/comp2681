@@ -1,27 +1,37 @@
+    <!--*********************************************************
+   *   Final Project: Vaccine Recording System
+   *   Purpose: Controller for the Record portion of the application
+   *   Author: Jose Garcia
+   *   Date: May 2021
+   *   Filename: Main.vue
+   *   Email: <garciaalfonzoj18@mytru.ca>
+   *   2021 Jose Garcia. Ottawa, Ontario.
+   *********************************************************-->
 <template>
     <form class="contact-form" @submit.prevent="submitRequest">
-    <div v-if="errors.length" class="error_box">
+    <div v-if="errors.length" ref="error_box" class="error_box" tabindex="0" role="alert">
       <b>Please correct the following error(s):</b>
       <ul>
-        <li v-for="error in errors"  v-bind:key="error">{{ error }}</li>
+        <li v-for="error in errors"  v-bind:key="error">{{ error[1] }}</li>
       </ul>
     </div>
+      <p>Required fields marked with an asterisk</p>
       <fieldset>
         <legend>Personal Info</legend>
         <div class="form-group">
-            <label for="name">Last Name</label>
+            <label for="name">Last Name<span class="required">*</span></label>
             <input type="text" name="lname" v-model="user.lname" class="full_width">
         </div>
         <div class="form-group">
-            <label for="name">First Name</label>
+            <label for="name">First Name<span class="required">*</span></label>
             <input type="text" name="fname" v-model="user.fname" class="full_width">
         </div>
         <div class="form-group">
-            <label for="name">Identification (e.g. Health card number)</label>
-            <input type="text" name="fname" v-model="user.indentification">
+            <label for="name">Identification (e.g. Health card number)<span class="required">*</span></label>
+            <input type="text" name="healthcard" v-model="user.indentification">
         </div>
         <div class="form-group">
-          <label for="dob">Date of Birth (DD/MM/YYYY)</label>
+          <label for="dob">Date of Birth (DD/MM/YYYY)<span class="required">*</span></label>
           <input type="text" name="dob" v-model="user.dob" class="full_width">
         </div>
         <div class="form-group">
@@ -55,11 +65,11 @@
       <fieldset>
         <legend>Contact Info</legend>
         <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email">Email<span class="required">*</span></label>
             <input type="email" name="email" v-model="user.email">
         </div>
         <div class="form-group">
-          <label for="phone">Home Phone</label>
+          <label for="phone">Home Phone<span class="required">*</span></label>
           <input type="tel" name="phone" v-model="user.phone">
         </div>
         <div class="form-group">
@@ -118,14 +128,30 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'RecordForm',
   methods: {
+    focusInput () {
+      this.$refs.error_box.focus()
+    },
     submitRequest: function (e) {
-      if (this.user.lname) {
-        return true
-      }
       this.errors = []
       if (!this.user.lname) {
-        this.errors.push('Last Name required.')
+        this.errors.push(['lname', 'Last Name required'])
       }
+      if (!this.user.fname) {
+        this.errors.push(['fname', 'First Name required'])
+      }
+      if (!this.user.healthcard) {
+        this.errors.push(['healthcard', 'Identification (e.g. Health card number) required'])
+      }
+      if (!this.user.dob) {
+        this.errors.push(['dob', 'Date of Birth  required'])
+      }
+      if (!this.user.email) {
+        this.errors.push(['email', 'Email required'])
+      }
+      if (!this.user.phone) {
+        this.errors.push(['phone', 'Home Phone required'])
+      }
+      this.$nextTick(() => this.focusInput())
       e.preventDefault()
     }
   },
@@ -151,5 +177,12 @@ export default defineComponent({
 }
 .radio_group{
   text-align: left;
+}
+.error_box a{
+  color: #0000d5
+}
+.error_box:focus-visible {
+    outline: none;
+    box-shadow: 0 0 3pt 2pt #4c8aff;
 }
 </style>

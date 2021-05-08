@@ -1,3 +1,12 @@
+/*********************************************************
+*   Final Project: Vaccine Recording System
+*   Purpose: Contains the data to be used in the FAQ section
+*   Author: Jose Garcia
+*   Date: May 2021
+*   Filename: faq.js
+*   Email: <garciaalfonzoj18@mytru.ca>
+*   2021 Jose Garcia. Ottawa, Ontario.
+**********************************************************/
 export const faq = [
   {
     question: 'What is some of the equipment being provided?',

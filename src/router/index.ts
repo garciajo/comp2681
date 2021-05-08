@@ -1,3 +1,12 @@
+/*********************************************************
+*   Final Project: Vaccine Recording System
+*   Purpose: Vue JS Router. Router used to build the Single Page Application functionality
+*   Author: Jose Garcia
+*   Date: May 2021
+*   Filename: index.ts
+*   Email: <garciaalfonzoj18@mytru.ca>
+*   2021 Jose Garcia. Ottawa, Ontario.
+**********************************************************/
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
 
@@ -6,11 +15,6 @@ const routes: Array<RouteRecordRaw> = [
     path: '/',
     name: 'Home',
     component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: () => import('../views/About.vue')
   },
   {
     path: '/calculate',

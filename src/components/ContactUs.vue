@@ -1,23 +1,27 @@
 <template>
     <form class="contact-form" @submit.prevent="submitRequest">
-    <div v-if="errors.length" class="error_box">
+       <div v-if="errors.length" ref="error_box" class="error_box" tabindex="0" role="alert">
       <b>Please correct the following error(s):</b>
       <ul>
-        <li v-for="error in errors"  v-bind:key="error">{{ error }}</li>
+        <li v-for="error in errors"  v-bind:key="error">{{ error[1] }}</li>
       </ul>
     </div>
-    <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" name="name" v-model="user.name">
-    </div>
-    <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" name="email" v-model="user.email">
-    </div>
-    <div class="form-group">
-        <label for="comments">Comments</label>
-        <p><textarea name="comments" rows="4" cols="20"> </textarea></p>
-    </div>
+      <p>Required fields marked with an asterisk</p>
+      <fieldset>
+        <legend>Contact Info</legend>
+          <div class="form-group">
+              <label for="name">Name<span class="required">*</span></label>
+              <input type="text" name="name" v-model="user.name">
+          </div>
+          <div class="form-group">
+              <label for="email">Email<span class="required">*</span></label>
+              <input type="email" name="email" v-model="user.email">
+          </div>
+          <div class="form-group">
+              <label for="comments">Comments</label>
+              <p><textarea name="comments" rows="4" cols="20"> </textarea></p>
+          </div>
+      </fieldset>
     <button type="submit">Submit</button>
     </form>
 </template>
@@ -26,17 +30,18 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'ContactUsForm',
   methods: {
+    focusInput () {
+      this.$refs.error_box.focus()
+    },
     submitRequest: function (e) {
-      console.log('Request submitted')
-      console.log(this.user.name)
-      if (this.user.name) {
-        console.log('true')
-        return true
-      }
       this.errors = []
       if (!this.user.name) {
-        this.errors.push('Name required.')
+        this.errors.push(['name', 'Name required'])
       }
+      if (!this.user.email) {
+        this.errors.push(['email', 'Email required'])
+      }
+      this.$nextTick(() => this.focusInput())
       e.preventDefault()
     }
   },
@@ -50,3 +55,12 @@ export default defineComponent({
   }
 })
 </script>
+<style lang="scss">
+.error_box a{
+  color: #0000d5
+}
+.error_box:focus-visible {
+    outline: none;
+    box-shadow: 0 0 3pt 2pt #4c8aff;
+}
+</style>

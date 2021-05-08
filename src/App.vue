@@ -1,3 +1,12 @@
+<!--*********************************************************
+  *   Final Project: Vaccine Recording System
+  *   Purpose: Main driver of the application
+  *   Author: Jose Garcia
+  *   Date: May 2021
+  *   Filename: App.vue
+  *   Email: <garciaalfonzoj18@mytru.ca>
+  *   2021 Jose Garcia. Ottawa, Ontario.
+  *********************************************************-->
 <template>
  <app-header />
   <router-view/>
@@ -16,8 +25,6 @@ export default {
 }
 </script>
 <style lang="scss">
-@import url(https://fonts.googleapis.com/css?family=Cinzel+Decorative:900);
-@import url(https://fonts.googleapis.com/css?family=Gudea);
 h2{
     margin-bottom: 0.25em;
 }
@@ -164,6 +171,12 @@ blockquote {
 }
 .error_box > ul > li{
     list-style-type: none;
+}
+.required{
+  display: inline;
+  color: red;
+  font-size: 1.25em;
+  margin-left: 0.25em;
 }
 @media screen and (max-width:600px){ /*Extra small devices*/
     .header-items{

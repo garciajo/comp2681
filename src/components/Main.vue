@@ -1,3 +1,12 @@
+    <!--*********************************************************
+   *   Final Project: Vaccine Recording System
+   *   Purpose: Controller for the Home page portion of the application
+   *   Author: Jose Garcia
+   *   Date: May 2021
+   *   Filename: Main.vue
+   *   Email: <garciaalfonzoj18@mytru.ca>
+   *   2021 Jose Garcia. Ottawa, Ontario.
+   *********************************************************-->
 <template>
   <div class="main">
     <h1>{{ msg }}</h1>

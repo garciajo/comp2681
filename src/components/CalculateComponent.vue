@@ -1,3 +1,12 @@
+    <!--*********************************************************
+   *   Final Project: Vaccine Recording System
+   *   Purpose: Controller for the Calculate portion of the application
+   *   Author: Jose Garcia
+   *   Date: May 2021
+   *   Filename: CalculateComponent.vue
+   *   Email: <garciaalfonzoj18@mytru.ca>
+   *   2021 Jose Garcia. Ottawa, Ontario.
+   *********************************************************-->
 <template>
     <form class="contact-form" @submit.prevent="submitRequest">
       <fieldset>

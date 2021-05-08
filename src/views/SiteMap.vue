@@ -1,3 +1,12 @@
+<!--*********************************************************
+  *   Final Project: Vaccine Recording System
+  *   Purpose: View for the Site Map cord portion of the application
+  *   Author: Jose Garcia
+  *   Date: May 2021
+  *   Filename: SiteMap.vue
+  *   Email: <garciaalfonzoj18@mytru.ca>
+  *   2021 Jose Garcia. Ottawa, Ontario.
+  *********************************************************-->
 <template>
   <div class="about">
     <h1>This is a Site Maps page</h1>

@@ -1,3 +1,12 @@
+    <!--*********************************************************
+   *   Final Project: Vaccine Recording System
+   *   Purpose: Header file to be used accross the application
+   *   Author: Jose Garcia
+   *   Date: May 2021
+   *   Filename: AppHeader.vue
+   *   Email: <garciaalfonzoj18@mytru.ca>
+   *   2021 Jose Garcia. Ottawa, Ontario.
+   *********************************************************-->
 <template>
   <header>
     <img alt="VRS Logo" src="../assets/img/logo.png" height="50">
