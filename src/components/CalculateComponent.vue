@@ -88,6 +88,23 @@
             <li>Each vaccine dose of 0.5 mL is withdrawn into a syringe for injection to be administered intramuscularly. Use a separate sterile needle and syringe for each individual.</li>
           </ul>
        </fieldset>
+        <fieldset v-if="selected">
+          <legend>Hand Washing</legend>
+            <audio controls>
+              <source src="../assets/audio/WaterAMetalTroughX2_TE36432.mp3" type="audio/mpeg">
+            </audio>
+            <p>Proper washing must be followed including these five steps:</p>
+             <ol>
+                <li>Wet your hands with clean, running water (warm or cold), turn off the tap, and apply soap.</li>
+                <li>Lather your hands by rubbing them together with the soap. Lather the backs of your hands, between your fingers, and under your nails.</li>
+                <li>Scrub your hands for at least 20 seconds. Need a timer? Hum the “Happy Birthday” song from beginning to end twice.</li>
+                <li>Rinse your hands well under clean, running water.</li>
+                <li>Dry your hands using a clean towel or air dry them.</li>
+             </ol>
+          <video width="320" height="240" controls>
+            <source src="../assets/video/200129_01_Medical_4k_011.mp4" type="video/mp4">
+            </video>
+        </fieldset>
        <fieldset v-if="selected">
         <legend>Contraindications</legend>
           <ul>

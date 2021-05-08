@@ -178,6 +178,13 @@ blockquote {
   font-size: 1.25em;
   margin-left: 0.25em;
 }
+input:invalid {
+     outline: none;
+    box-shadow: 0 0 3pt 2pt #ff4545;
+}
+p{
+    text-align: left;
+}
 @media screen and (max-width:600px){ /*Extra small devices*/
     .header-items{
         float:left;

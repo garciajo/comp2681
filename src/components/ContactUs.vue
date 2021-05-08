@@ -1,3 +1,12 @@
+    <!--*********************************************************
+   *   Final Project: Vaccine Recording System
+   *   Purpose: Controller for the Contact Us portion of the application
+   *   Author: Jose Garcia
+   *   Date: May 2021
+   *   Filename: ContactUs.vue
+   *   Email: <garciaalfonzoj18@mytru.ca>
+   *   2021 Jose Garcia. Ottawa, Ontario.
+   *********************************************************-->
 <template>
     <form class="contact-form" @submit.prevent="submitRequest">
        <div v-if="errors.length" ref="error_box" class="error_box" tabindex="0" role="alert">
@@ -15,7 +24,7 @@
           </div>
           <div class="form-group">
               <label for="email">Email<span class="required">*</span></label>
-              <input type="email" name="email" v-model="user.email">
+              <input type="email" name="email" v-model="user.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
           </div>
           <div class="form-group">
               <label for="comments">Comments</label>

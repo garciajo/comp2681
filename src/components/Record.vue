@@ -66,7 +66,7 @@
         <legend>Contact Info</legend>
         <div class="form-group">
             <label for="email">Email<span class="required">*</span></label>
-            <input type="email" name="email" v-model="user.email">
+            <input type="email" name="email" v-model="user.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
         </div>
         <div class="form-group">
           <label for="phone">Home Phone<span class="required">*</span></label>

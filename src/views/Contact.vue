@@ -1,3 +1,12 @@
+<!--*********************************************************
+  *   Final Project: Vaccine Recording System
+  *   Purpose: View for the Contact portion of the application
+  *   Author: Jose Garcia
+  *   Date: May 2021
+  *   Filename: Contact.vue
+  *   Email: <garciaalfonzoj18@mytru.ca>
+  *   2021 Jose Garcia. Ottawa, Ontario.
+  *********************************************************-->
 <template>
   <div class="about">
     <h1>This is a Contact Us page</h1>
@@ -56,5 +65,4 @@ button[type=submit] {
 button[type=submit]:hover{
       background-color: #2675fd;
 }
-
 </style>
