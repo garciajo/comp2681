@@ -188,6 +188,10 @@ input:invalid {
 p{
     text-align: left;
 }
+.required_text{
+    padding-left: 1em;
+    margin-left: 1px;
+}
 .footer_year{
     text-align: center;
 }

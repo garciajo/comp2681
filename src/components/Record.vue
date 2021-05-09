@@ -15,7 +15,7 @@
         <li v-for="error in errors"  v-bind:key="error">{{ error[1] }}</li>
       </ul>
     </div>
-      <p>Required fields marked with an asterisk</p>
+      <p class="required_text">Required fields marked with an asterisk</p>
       <fieldset>
         <legend>Personal Info</legend>
         <div class="form-group">
