@@ -29,8 +29,6 @@ export default defineComponent({
 </script>
 <style lang="scss">
 .container {
-    padding-left: 20em;
-    padding-right: 20em;
     background-color: #d5d5d5;
     padding-top: 1em;
     padding-bottom: 1em;

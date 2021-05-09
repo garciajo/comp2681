@@ -34,11 +34,13 @@ p, ul{
 li{
     text-align: left;
 }
+form{
+    padding: 0.25em;
+}
 .container {
     padding-left: 15em;
     padding-right: 15em;
     background-color: #e6e6e6;
-    padding-top: 1em;
     padding-bottom: 1em;
 }
 fieldset {
@@ -140,6 +142,7 @@ td{
 }
 .wrapper {
     text-align: left;
+    padding: 0 0.25em;
 }
 .links_table th{
     border: none;
@@ -190,6 +193,12 @@ p{
 }
 /* Responsive Design Classes */
 @media screen and (max-width:600px){ /*Extra small devices*/
+    h2{
+        margin-top: 0.25em;
+    }
+    .container{
+        padding: 0.25em 0 0.1em 0;
+    }
     nav ul li {
      display: block;
      margin-left: 1rem;
@@ -223,11 +232,11 @@ p{
     .footer_box > p {
         line-height: 0.5em;
     }
-    .links_table{
-        width: 600px;
-    }
 }
 @media screen and (min-width:768px) and (max-width: 992px){ /*Tablets*/
+    .container{
+        padding: 0.25em 0 0 0;
+    }
     nav ul li {
      display: block;
      margin-left: 1rem;

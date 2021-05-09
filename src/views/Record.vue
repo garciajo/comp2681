@@ -1,3 +1,12 @@
+<!--*********************************************************
+  *   Final Project: Vaccine Recording System
+  *   Purpose: View for the Record portion of the application
+  *   Author: Jose Garcia
+  *   Date: May 2021
+  *   Filename: Record.vue
+  *   Email: <garciaalfonzoj18@mytru.ca>
+  *   2021 Jose Garcia. Ottawa, Ontario.
+  *********************************************************-->
 <template>
   <div class="about">
     <h1>COVID-19 Vaccine Recording Form</h1>
@@ -20,8 +29,6 @@ export default defineComponent({
 </script>
 <style lang="scss">
 .container {
-    padding-left: 15em;
-    padding-right: 15em;
     background-color: #d5d5d5;
     padding-top: 1em;
     padding-bottom: 1em;
