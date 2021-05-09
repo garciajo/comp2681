@@ -38,8 +38,6 @@ form{
     padding: 0.25em;
 }
 .container {
-    padding-left: 15em;
-    padding-right: 15em;
     background-color: #e6e6e6;
     padding-bottom: 1em;
 }
