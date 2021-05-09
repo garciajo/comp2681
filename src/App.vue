@@ -185,7 +185,25 @@ input:invalid {
 p{
     text-align: left;
 }
+.footer_year{
+    text-align: center;
+}
+/* Responsive Design Classes */
 @media screen and (max-width:600px){ /*Extra small devices*/
+    nav ul li {
+     display: block;
+     margin-left: 1rem;
+     margin-bottom: 0.25em;
+    }
+    .homepage_box{
+        border: 1px solid #585858;
+        padding: 0.25em;
+        margin-bottom: 1em;
+        border-radius: 2px;
+    }
+    .homepage_box:hover{
+        border: 3px solid #000000;
+    }
     .header-items{
         float:left;
         margin-right: 2em;
@@ -210,6 +228,20 @@ p{
     }
 }
 @media screen and (min-width:768px) and (max-width: 992px){ /*Tablets*/
+    nav ul li {
+     display: block;
+     margin-left: 1rem;
+     margin-bottom: 0.25em;
+    }
+    .homepage_box{
+        border: 1px solid #585858;
+        padding: 0.25em;
+        margin-bottom: 1em;
+        border-radius: 2px;
+    }
+    .homepage_box:hover{
+        border: 3px solid #000000;
+    }
     .homepage_images{
        display: none;
     }

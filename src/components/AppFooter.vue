@@ -1,3 +1,12 @@
+    <!--*********************************************************
+   *   Final Project: Vaccine Recording System
+   *   Purpose: Footer file to be used accross the application
+   *   Author: Jose Garcia
+   *   Date: May 2021
+   *   Filename: AppFooter.vue
+   *   Email: <garciaalfonzoj18@mytru.ca>
+   *   2021 Jose Garcia. Ottawa, Ontario.
+   *********************************************************-->
 <template>
 <footer>
     <div class="footer_box">
@@ -34,5 +43,26 @@
         </ul>
     </div>
 </footer>
-<p>Last Modified: May 2021</p>
+<p class="footer_year">Copyright <span id="current_year">{{ currentYear() }}</span></p>
 </template>
+<script>
+import { defineComponent } from 'vue'
+export default defineComponent({
+  data () {
+    return {
+      selected: ''
+    }
+  },
+  name: 'AppFooter',
+  props: {
+    msg: String
+  },
+  methods: {
+    currentYear () {
+      const currentDate = new Date()
+      const year = currentDate.getFullYear()
+      return year
+    }
+  }
+})
+</script>
