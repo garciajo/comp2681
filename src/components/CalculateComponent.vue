@@ -74,12 +74,12 @@
             <li>If the amount of vaccine remaining in the vial and any excess volume, do not pool excess vaccine from multiple vials</li>
           </ul>
           <ul v-if="selected == 'Moderna'">
-            <li>After preparation, each vial of Moderna COVID-19 Vaccine containes up to ten doses of 0.5mL</li>
+            <li>After preparation, each vial of Moderna COVID-19 Vaccine contains up to ten doses of 0.5mL</li>
             <li>Each dose must contain 0.5mL of vaccine</li>
             <li>If the amount of vaccine remaining in the vial and any excess volume, do not pool excess vaccine from multiple vials</li>
           </ul>
           <ul v-if="selected == 'AstraZeneca'">
-            <li>AstraZeneca COVID-19 vaccine is packaged in (not all pack sizes may beavailable):</li>
+            <li>AstraZeneca COVID-19 vaccine is packaged in (not all pack sizes may be available):</li>
             <ul>
               <li>5 mL of solution in a 10-dose vial (clear type I glass) with stopper (elastomeric with aluminium overseal)</li>
               <li>4 mL of solution in an 8-dose vial (clear type I glass) with stopper (elastomeric with aluminium overseal).</li>
@@ -113,8 +113,8 @@
             <li>Individuals who have received another vaccine (not a COVID-19 vaccine) in the past 14 days</li>
             <li>Women who are or who may become pregnant</li>
             <li>Women who are breastfeeding</li>
-            <li>Individuals who are immunosupressed due to diseases or treatment or those with an autoimmune disorder</li>
-            <li>Patients Exhibiting signs ad sumpoms of COVID-19 should not receive this vaccine until their symptoms have abated</li>
+            <li>Individuals who are immunosuppressed due to diseases or treatment or those with an autoimmune disorder</li>
+            <li>Patients Exhibiting signs and symptoms of COVID-19 should not receive this vaccine until their symptoms have abated</li>
           </ul>
        </fieldset>
     </form>

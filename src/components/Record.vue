@@ -56,7 +56,7 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="physician">Primary Care Clinician (Family Physician or Nurse Practicioner)</label>
+              <label for="physician">Primary Care Clinician (Family Physician or Nurse Practitioner)</label>
               <input type="text" name="physician" v-model="user.physician" class="full_width">
             </div>
        </fieldset>
