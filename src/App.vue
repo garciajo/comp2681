@@ -239,7 +239,7 @@ p{
 }
 @media screen and (min-width:768px) and (max-width: 992px){ /*Tablets*/
     .container{
-        padding: 0.25em 0 0 0;
+        padding: 0.25em 0 0;
     }
     nav ul li {
      display: block;
@@ -263,6 +263,9 @@ p{
     }
 }
 @media screen and (min-width:992px){ /* Desktops */
+    .container{
+        padding: 0.25em 0 0;
+    }
     .homepage_boxes{
         display: flex;
         justify-content: center;
